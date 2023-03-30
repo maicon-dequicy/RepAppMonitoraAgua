@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.location.GnssAntennaInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -86,7 +87,11 @@ public class nova_perfilGeral extends AppCompatActivity{
         Sensor02 = (Button) findViewById(R.id.PH);
         Sensor03 = (Button) findViewById(R.id.Turbidez);
         Sensor04 = (Button) findViewById(R.id.SensorTDS);
+
+        navigationView = (BottomNavigationView) findViewById(R.id.bar_01);
+
     }
+
 
     //metodo para pegar o valor mais recente da temperatura
     public void atualizar(View view) {
@@ -136,4 +141,6 @@ public class nova_perfilGeral extends AppCompatActivity{
         Intent intent = new Intent(nova_perfilGeral.this, Adicionar_Sensor.class);
         startActivity(intent);
     }
+
+
 }
