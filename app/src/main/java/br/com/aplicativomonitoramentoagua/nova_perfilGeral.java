@@ -27,6 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import org.eazegraph.lib.charts.ValueLineChart;
+
 public class nova_perfilGeral extends AppCompatActivity{
 
     private Button EditandoSensor;
@@ -43,6 +45,9 @@ public class nova_perfilGeral extends AppCompatActivity{
     private TextView resultadoSensor;
     private DatabaseReference ref2;
     private BottomNavigationView navigationView;
+
+    private ValueLineChart valueLineChart;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +81,8 @@ public class nova_perfilGeral extends AppCompatActivity{
         getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+
     }
 
     //pega ids de botoes, layouts e textviews
@@ -87,8 +94,6 @@ public class nova_perfilGeral extends AppCompatActivity{
         Sensor02 = (Button) findViewById(R.id.PH);
         Sensor03 = (Button) findViewById(R.id.Turbidez);
         Sensor04 = (Button) findViewById(R.id.SensorTDS);
-
-        navigationView = (BottomNavigationView) findViewById(R.id.bar_01);
 
     }
 
